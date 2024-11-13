@@ -5,9 +5,9 @@ V = 330;				    %volume
 
 A = 2*pi*r.^2 + 2*V./r;		%surface area
   
-[opt_r,i] = min(A);         %find optimal r
+[opt_A,i] = min(A);         %find optimal r
 
-opt_h = V/(pi*opt_r^2);
+opt_h = V/(pi*r(i)^2);
 
 display(['The optimal radius is: ',num2str(r(i)),'cm',', the optimal height is: ',num2str(opt_h),'cm']);
 
